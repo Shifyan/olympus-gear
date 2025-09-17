@@ -14,22 +14,30 @@ export default function Header() {
               <Image
                 src="/bars-3.png"
                 alt="bars"
-                width={20}
-                height={20}
+                width={25}
+                height={25}
                 className={`transition-transform duration-300 ${
                   isOpen ? "rotate-90" : "rotate-0"
                 }`}
               />
             </div>
           </div>
-          <div className="basis-1/3">
+          <div className="basis-1/3 flex justify-center">
             <Link href="/" className="text-[20px] font-bold ">
               OLYMPUS
             </Link>
           </div>
-          <div className="basis-1/3 flex justify-end">
+          <div className="basis-1/3 flex justify-end ">
             <Link href="/">
-              <Image src="/User.png" alt="User" width={16} height={16}></Image>
+              <Image src="/User.png" alt="User" width={20} height={20}></Image>
+            </Link>
+            <Link href="/" className="ms-[9px]">
+              <Image
+                src="/clear-sky.png"
+                alt="User"
+                width={20}
+                height={20}
+              ></Image>
             </Link>
           </div>
         </div>
