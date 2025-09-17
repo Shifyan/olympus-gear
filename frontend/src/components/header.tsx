@@ -8,11 +8,16 @@ export default function Header() {
   return (
     <div>
       <div className="bg-white rounded-[12px]">
-        <div className="flex  items-center py-[16px] px-[16px] ">
+        <div
+          className={`flex  items-center transition-[padding] duration-500 px-[16px] ${
+            isOpen ? "pt-[16px] " : "py-[16px] "
+          }`}
+        >
           <div className="basis-1/3">
-            <div onClick={() => setIsOpen(!isOpen)}>
+            <div>
               <Image
-                src="/bars-3.png"
+                onClick={() => setIsOpen(!isOpen)}
+                src="/menu.png"
                 alt="bars"
                 width={25}
                 height={25}
@@ -30,14 +35,6 @@ export default function Header() {
           <div className="basis-1/3 flex justify-end ">
             <Link href="/">
               <Image src="/User.png" alt="User" width={20} height={20}></Image>
-            </Link>
-            <Link href="/" className="ms-[9px]">
-              <Image
-                src="/clear-sky.png"
-                alt="User"
-                width={20}
-                height={20}
-              ></Image>
             </Link>
           </div>
         </div>
@@ -65,6 +62,11 @@ export default function Header() {
             <li className="transition-opacity duration-700 delay-400">
               <Link className="flex justify-center" href="/">
                 Gears
+              </Link>
+            </li>
+            <li className="transition-opacity duration-700 delay-400">
+              <Link className="flex justify-center" href="/">
+                Weather
               </Link>
             </li>
           </ul>
